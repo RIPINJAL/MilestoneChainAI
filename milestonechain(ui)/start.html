@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start - MilestoneChain</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0B0B0B 0%, #1a1a1a 100%);
+            color: #ffffff;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #39FF14 0%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            color: #b0b0b0;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+        .page-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .page-card {
+            background: #1f1f1f;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+        }
+        .page-card:hover {
+            border-color: #39FF14;
+            box-shadow: 0 0 30px rgba(57, 255, 20, 0.3);
+            transform: translateY(-5px);
+        }
+        .page-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .page-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #39FF14;
+        }
+        .page-desc {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+        }
+        .info-box {
+            background: #1f1f1f;
+            border: 1px solid #39FF14;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .info-box h2 {
+            color: #39FF14;
+            margin-bottom: 1rem;
+        }
+        .info-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .info-box li {
+            padding: 0.5rem 0;
+            color: #b0b0b0;
+        }
+        .info-box li::before {
+            content: "✓ ";
+            color: #39FF14;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        .theme-note {
+            background: rgba(57, 255, 20, 0.1);
+            border-left: 4px solid #39FF14;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 MilestoneChain</h1>
+        <p class="subtitle">Decentralized Milestone-Based Funding Platform</p>
+
+        <div class="info-box">
+            <h2>🚀 Quick Start Guide</h2>
+            <ul>
+                <li>Click any page below to explore the platform</li>
+                <li>Use the theme toggle (top right) to switch between dark and light themes</li>
+                <li>All pages are fully responsive and interactive</li>
+                <li>No installation or setup required - just open and explore!</li>
+            </ul>
+        </div>
+
+        <h2 style="color: #39FF14; margin-bottom: 1.5rem;">📄 Available Pages</h2>
+        
+        <div class="page-grid">
+            <a href="index.html" class="page-card">
+                <div class="page-icon">🏠</div>
+                <div class="page-title">Landing Page</div>
+                <div class="page-desc">Hero section, problem/solution, and platform overview</div>
+            </a>
+
+            <a href="explore.html" class="page-card">
+                <div class="page-icon">🔍</div>
+                <div class="page-title">Explore Projects</div>
+                <div class="page-desc">Browse all projects with funding progress and risk scores</div>
+            </a>
+
+            <a href="project-details.html" class="page-card">
+                <div class="page-icon">📊</div>
+                <div class="page-title">Project Details</div>
+                <div class="page-desc">Complete project info, milestones, and funding panel</div>
+            </a>
+
+            <a href="creator-dashboard.html" class="page-card">
+                <div class="page-icon">👨‍💼</div>
+                <div class="page-title">Creator Dashboard</div>
+                <div class="page-desc">Manage projects and submit milestone proofs</div>
+            </a>
+
+            <a href="validator-panel.html" class="page-card">
+                <div class="page-icon">✅</div>
+                <div class="page-title">Validator Panel</div>
+                <div class="page-desc">Review and verify milestone submissions</div>
+            </a>
+
+            <a href="system-dashboard.html" class="page-card">
+                <div class="page-icon">📈</div>
+                <div class="page-title">System Dashboard</div>
+                <div class="page-desc">Platform analytics and performance metrics</div>
+            </a>
+        </div>
+
+        <div class="theme-note">
+            <strong>🎨 Theme Toggle:</strong> Look for the toggle switch in the navigation bar to switch between:
+            <br><br>
+            <strong>Dark Theme:</strong> Black background with neon green (#39FF14) accents
+            <br>
+            <strong>Light Theme:</strong> White background with neon pink (#FF2ED1) accents
+        </div>
+    </div>
+</body>
+</html>

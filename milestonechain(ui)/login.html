@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MilestoneChain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-page">
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">MilestoneChain</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="creator-dashboard.html">Creator</a>
+                <a href="validator-panel.html">Validator</a>
+                <label class="theme-toggle">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <section class="login-hero">
+        <div class="network-bg">
+            <div class="network-node" style="top: 10%; left: 20%;"></div>
+            <div class="network-node" style="top: 30%; left: 70%;"></div>
+            <div class="network-node" style="top: 60%; left: 40%;"></div>
+            <div class="network-node" style="top: 80%; left: 80%;"></div>
+        </div>
+
+        <div class="container login-layout">
+            <div class="brand-panel">
+                <h1 class="brand-title">MilestoneChain</h1>
+                <p class="brand-subtitle">Transparent milestone-based project funding secured by blockchain, verified with AI risk analysis and validator approvals.</p>
+
+                <div class="brand-badges">
+                    <span class="badge">Blockchain Escrow</span>
+                    <span class="badge">AI Risk Scoring</span>
+                    <span class="badge">Validator Approval</span>
+                </div>
+
+                <p class="brand-note">Sign in to manage projects, fund initiatives, or validate milestone submissions securely.</p>
+            </div>
+
+            <div class="login-card">
+                <h2 class="login-title">Login to MilestoneChain</h2>
+
+                <div class="role-tabs" role="tablist" aria-label="Login role selection">
+                    <button type="button" class="role-tab active" data-role="admin">Admin</button>
+                    <button type="button" class="role-tab" data-role="funder">Funder</button>
+                    <button type="button" class="role-tab" data-role="student">Student</button>
+                </div>
+
+                <form class="login-form" novalidate>
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <div class="input-icon">
+                            <span class="input-prefix">🔒</span>
+                            <input id="loginEmail" class="form-control" type="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <div class="input-icon">
+                            <span class="input-prefix">🔑</span>
+                            <input id="loginPassword" class="form-control" type="password" placeholder="Enter your password" required>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="link">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block"><span>Login</span></button>
+
+                    <div class="secondary-action">
+                        <span>New here?</span>
+                        <a href="#" class="link">Create account</a>
+                    </div>
+
+                    <div class="security-note">
+                        <span class="lock-icon">🔒</span>
+                        <span>Secure authentication powered by blockchain and AI risk verification.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Role selection UI
+        const roleTabs = document.querySelectorAll('.role-tab');
+        roleTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                roleTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        // Prevent default form submission for this mock login
+        const loginForm = document.querySelector('.login-form');
+        if (loginForm) {
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const activeRole = document.querySelector('.role-tab.active')?.dataset.role;
+                alert(`Logging in as ${activeRole || 'user'}...`);
+            });
+        }
+    </script>
+</body>
+</html>

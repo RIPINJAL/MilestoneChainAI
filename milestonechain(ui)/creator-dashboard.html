@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Dashboard - MilestoneChain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">MilestoneChain</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="creator-dashboard.html">Creator</a>
+                <a href="validator-panel.html">Validator</a>
+                <label class="theme-toggle">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="page-title">Creator Dashboard</h1>
+            <p class="page-subtitle">Manage your projects and submit milestone proofs</p>
+
+            <div class="card">
+                <h2>My Projects</h2>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Project Name</th>
+                                <th>Category</th>
+                                <th>Funds Raised</th>
+                                <th>Current Milestone</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Smart Irrigation System</strong></td>
+                                <td>AgriTech</td>
+                                <td>₹38,500 / ₹50,000</td>
+                                <td>Milestone 2</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td><a href="project-details.html?id=1" class="btn-link">View</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vertical Farming Hub</strong></td>
+                                <td>AgriTech</td>
+                                <td>₹12,000 / ₹40,000</td>
+                                <td>Milestone 1</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td><a href="project-details.html?id=7" class="btn-link">View</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Drone Crop Monitoring</strong></td>
+                                <td>AgriTech</td>
+                                <td>₹65,000 / ₹65,000</td>
+                                <td>Milestone 4</td>
+                                <td><span class="status-badge status-completed">Completed</span></td>
+                                <td><a href="project-details.html?id=8" class="btn-link">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Submit Milestone Proof</h2>
+                <form class="milestone-form">
+                    <div class="form-group">
+                        <label for="projectSelect">Select Project</label>
+                        <select id="projectSelect" class="form-control">
+                            <option value="">Choose a project...</option>
+                            <option value="1">Smart Irrigation System</option>
+                            <option value="2">Vertical Farming Hub</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="milestoneNumber">Milestone Number</label>
+                        <select id="milestoneNumber" class="form-control">
+                            <option value="">Select milestone...</option>
+                            <option value="1">Milestone 1</option>
+                            <option value="2">Milestone 2</option>
+                            <option value="3">Milestone 3</option>
+                            <option value="4">Milestone 4</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="milestoneDescription">Description</label>
+                        <textarea id="milestoneDescription" class="form-control" rows="4" placeholder="Describe what you've accomplished for this milestone..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proofUpload">Upload Proof (Image/Report)</label>
+                        <div class="file-upload">
+                            <input type="file" id="proofUpload" accept="image/*,.pdf">
+                            <label for="proofUpload" class="file-upload-label">
+                                <span class="upload-icon">📎</span>
+                                <span class="upload-text">Choose file or drag here</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"><span>Submit Milestone</span></button>
+                </form>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">Total Projects</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-content">
+                        <div class="stat-value">₹1,15,500</div>
+                        <div class="stat-label">Total Raised</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-content">
+                        <div class="stat-value">7</div>
+                        <div class="stat-label">Completed Milestones</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⏳</div>
+                    <div class="stat-content">
+                        <div class="stat-value">2</div>
+                        <div class="stat-label">Pending Review</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

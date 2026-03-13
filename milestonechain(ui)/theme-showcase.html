@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Showcase - MilestoneChain</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #39FF14 0%, #FF2ED1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+        }
+        .themes-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .theme-preview {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        .theme-header {
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .dark-theme-preview .theme-header {
+            background: #0B0B0B;
+            color: #39FF14;
+            border-bottom: 2px solid #39FF14;
+        }
+        .light-theme-preview .theme-header {
+            background: #ffffff;
+            color: #FF2ED1;
+            border-bottom: 2px solid #FF2ED1;
+        }
+        .theme-content {
+            padding: 2rem;
+        }
+        .dark-theme-preview .theme-content {
+            background: #1a1a1a;
+        }
+        .light-theme-preview .theme-content {
+            background: #f8f8f8;
+        }
+        .sample-card {
+            background: #1f1f1f;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .dark-theme-preview .sample-card {
+            background: #1f1f1f;
+            border-color: #39FF14;
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+        }
+        .light-theme-preview .sample-card {
+            background: #ffffff;
+            border-color: #FF2ED1;
+            box-shadow: 0 4px 20px rgba(255, 46, 209, 0.15);
+        }
+        .sample-card h3 {
+            margin-bottom: 0.5rem;
+        }
+        .dark-theme-preview .sample-card h3 {
+            color: #39FF14;
+        }
+        .light-theme-preview .sample-card h3 {
+            color: #FF2ED1;
+        }
+        .dark-theme-preview .sample-card p {
+            color: #b0b0b0;
+        }
+        .light-theme-preview .sample-card p {
+            color: #666666;
+        }
+        .sample-button {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 1rem;
+            margin-top: 1rem;
+        }
+        .dark-theme-preview .sample-button {
+            background: #39FF14;
+            color: #000;
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+        }
+        .light-theme-preview .sample-button {
+            background: #FF2ED1;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255, 46, 209, 0.3);
+        }
+        .sample-progress {
+            height: 8px;
+            background: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+        .dark-theme-preview .sample-progress {
+            background: #2a2a2a;
+        }
+        .light-theme-preview .sample-progress {
+            background: #e0e0e0;
+        }
+        .sample-progress-fill {
+            height: 100%;
+            width: 70%;
+        }
+        .dark-theme-preview .sample-progress-fill {
+            background: #39FF14;
+            box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+        }
+        .light-theme-preview .sample-progress-fill {
+            background: #FF2ED1;
+            box-shadow: 0 0 10px rgba(255, 46, 209, 0.3);
+        }
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .color-swatch {
+            text-align: center;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+        .start-button {
+            display: block;
+            width: 300px;
+            margin: 3rem auto;
+            padding: 1.5rem 3rem;
+            background: linear-gradient(135deg, #39FF14 0%, #FF2ED1 100%);
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 10px 40px rgba(57, 255, 20, 0.3);
+            transition: transform 0.3s;
+        }
+        .start-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(57, 255, 20, 0.5);
+        }
+        .features-list {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .features-list h2 {
+            color: #39FF14;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .feature-item {
+            padding: 1rem;
+            background: #0B0B0B;
+            border-radius: 8px;
+            border-left: 3px solid #39FF14;
+        }
+        .feature-item strong {
+            color: #39FF14;
+        }
+        @media (max-width: 968px) {
+            .themes-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 MilestoneChain Theme Showcase</h1>
+        <p class="subtitle">Experience both themes side by side</p>
+
+        <div class="themes-container">
+            <!-- Dark Theme Preview -->
+            <div class="theme-preview dark-theme-preview">
+                <div class="theme-header">
+                    🌙 Dark Theme
+                </div>
+                <div class="theme-content">
+                    <div class="sample-card">
+                        <h3>Smart Irrigation System</h3>
+                        <p>AgriTech • $38,500 / $50,000</p>
+                        <div class="sample-progress">
+                            <div class="sample-progress-fill"></div>
+                        </div>
+                        <p style="font-size: 0.9rem;">77% funded • Low Risk</p>
+                        <button class="sample-button">View Project</button>
+                    </div>
+                    
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background: #0B0B0B; border: 1px solid #39FF14;">
+                            <strong style="color: #39FF14;">#0B0B0B</strong><br>
+                            <span style="color: #888;">Background</span>
+                        </div>
+                        <div class="color-swatch" style="background: #39FF14; color: #000;">
+                            <strong>#39FF14</strong><br>
+                            <span>Neon Green</span>
+                        </div>
+                        <div class="color-swatch" style="background: #1f1f1f; border: 1px solid #39FF14;">
+                            <strong style="color: #39FF14;">#1f1f1f</strong><br>
+                            <span style="color: #888;">Cards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Light Theme Preview -->
+            <div class="theme-preview light-theme-preview">
+                <div class="theme-header">
+                    ☀️ Light Theme
+                </div>
+                <div class="theme-content">
+                    <div class="sample-card">
+                        <h3>Smart Irrigation System</h3>
+                        <p>AgriTech • $38,500 / $50,000</p>
+                        <div class="sample-progress">
+                            <div class="sample-progress-fill"></div>
+                        </div>
+                        <p style="font-size: 0.9rem;">77% funded • Low Risk</p>
+                        <button class="sample-button">View Project</button>
+                    </div>
+                    
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background: #ffffff; border: 1px solid #FF2ED1; color: #000;">
+                            <strong style="color: #FF2ED1;">#FFFFFF</strong><br>
+                            <span style="color: #666;">Background</span>
+                        </div>
+                        <div class="color-swatch" style="background: #FF2ED1; color: #fff;">
+                            <strong>#FF2ED1</strong><br>
+                            <span>Neon Pink</span>
+                        </div>
+                        <div class="color-swatch" style="background: #f8f8f8; border: 1px solid #FF2ED1; color: #000;">
+                            <strong style="color: #FF2ED1;">#f8f8f8</strong><br>
+                            <span style="color: #666;">Cards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-list">
+            <h2>✨ Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <strong>🎨 Dual Themes</strong><br>
+                    Dark & Light with smooth transitions
+                </div>
+                <div class="feature-item">
+                    <strong>📱 Responsive</strong><br>
+                    Works on desktop, tablet, mobile
+                </div>
+                <div class="feature-item">
+                    <strong>🔗 6 Pages</strong><br>
+                    Complete platform interface
+                </div>
+                <div class="feature-item">
+                    <strong>⚡ Interactive</strong><br>
+                    Forms, buttons, animations
+                </div>
+                <div class="feature-item">
+                    <strong>🎯 Modern Design</strong><br>
+                    Fintech + Web3 aesthetic
+                </div>
+                <div class="feature-item">
+                    <strong>💾 Persistent</strong><br>
+                    Theme saved in localStorage
+                </div>
+            </div>
+        </div>
+
+        <a href="start.html" class="start-button">🚀 Explore Platform</a>
+    </div>
+</body>
+</html>

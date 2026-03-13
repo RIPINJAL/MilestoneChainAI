@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - MilestoneChain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">MilestoneChain</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="creator-dashboard.html">Creator</a>
+                <a href="validator-panel.html">Validator</a>
+                <label class="theme-toggle">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <a href="explore.html" class="back-link">← Back to Projects</a>
+            
+            <div class="project-detail-layout">
+                <div class="project-main">
+                    <div class="project-header">
+                        <div class="project-category">AgriTech</div>
+                        <h1 class="project-title">Smart Irrigation System</h1>
+                        <p class="project-creator">by <strong>John Farmer</strong></p>
+                    </div>
+
+                    <div class="card">
+                        <h2>Project Overview</h2>
+                        <p>Developing an IoT-based smart irrigation system that uses soil moisture sensors, weather data, and AI to optimize water usage for farms. This system will reduce water consumption by 40% while improving crop yields by 25%.</p>
+                        
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Real-time soil moisture monitoring with IoT sensors</li>
+                            <li>Weather-based irrigation scheduling using AI predictions</li>
+                            <li>Mobile app for remote control and monitoring</li>
+                            <li>AI-powered water optimization algorithms</li>
+                            <li>Integration with existing irrigation infrastructure</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h2>Milestone Timeline</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker completed"></div>
+                                <div class="timeline-content">
+                                    <h4>Milestone 1: Research & Design</h4>
+                                    <p>Complete system architecture and component selection</p>
+                                    <div class="milestone-status status-completed">Completed</div>
+                                    <div class="milestone-amount">₹10,000 released</div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>Milestone 2: Prototype Development</h4>
+                                    <p>Build working prototype with sensor integration</p>
+                                    <div class="milestone-status status-review">Under Review</div>
+                                    <div class="milestone-amount">₹15,000 pending</div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-marker pending"></div>
+                                <div class="timeline-content">
+                                    <h4>Milestone 3: Field Testing</h4>
+                                    <p>Deploy and test system on pilot farms</p>
+                                    <div class="milestone-status status-pending">Pending</div>
+                                    <div class="milestone-amount">₹13,500 locked</div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-marker pending"></div>
+                                <div class="timeline-content">
+                                    <h4>Milestone 4: Production & Launch</h4>
+                                    <p>Manufacturing and market launch</p>
+                                    <div class="milestone-status status-pending">Pending</div>
+                                    <div class="milestone-amount">₹11,500 locked</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-sidebar">
+                    <div class="card funding-card">
+                        <h3>Funding Progress</h3>
+                        <div class="funding-stats">
+                            <div class="funding-amount">
+                                <span class="amount-raised">₹38,500</span>
+                                <span class="amount-goal">of ₹50,000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 77%"></div>
+                            </div>
+                            <div class="progress-text">77% funded</div>
+                        </div>
+
+                        <div class="funding-form">
+                            <label for="fundAmount">Fund this project</label>
+                            <input type="number" id="fundAmount" placeholder="Enter amount (₹)" min="100">
+                            <button class="btn btn-primary btn-block"><span>Fund Project</span></button>
+                        </div>
+
+                        <div class="funding-info">
+                            <div class="info-item">
+                                <span class="info-label">Backers</span>
+                                <span class="info-value">127</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Days Left</span>
+                                <span class="info-value">23</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card risk-card">
+                        <h3>AI Risk Assessment</h3>
+                        <div class="tooltip">
+                            <div class="risk-gauge">
+                                <div class="gauge-container">
+                                    <div class="gauge">
+                                        <div class="gauge-fill" style="--gauge-value: 25%"></div>
+                                    </div>
+                                    <div class="gauge-label">25/100</div>
+                                </div>
+                            </div>
+                            <span class="tooltiptext">AI analyzes project activity, creator history, and milestone credibility to generate this risk score</span>
+                        </div>
+                        <div class="risk-badge-large risk-low">Low Risk</div>
+                        <div class="risk-factors">
+                            <div class="risk-factor">
+                                <span>✓ Experienced creator</span>
+                            </div>
+                            <div class="risk-factor">
+                                <span>✓ Realistic milestones</span>
+                            </div>
+                            <div class="risk-factor">
+                                <span>✓ Clear documentation</span>
+                            </div>
+                            <div class="risk-factor">
+                                <span>⚠ Market competition</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

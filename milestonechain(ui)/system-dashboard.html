@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Dashboard - MilestoneChain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">MilestoneChain</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="creator-dashboard.html">Creator</a>
+                <a href="validator-panel.html">Validator</a>
+                <label class="theme-toggle">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="page-title">System Dashboard</h1>
+            <p class="page-subtitle">Platform analytics and performance metrics</p>
+
+            <div class="dashboard-grid">
+                <div class="stat-card-large">
+                    <div class="stat-icon-large">🚀</div>
+                    <div class="stat-content">
+                        <div class="stat-value-large">247</div>
+                        <div class="stat-label">Total Projects</div>
+                        <div class="stat-change positive">+12% this month</div>
+                    </div>
+                </div>
+
+                <div class="stat-card-large">
+                    <div class="stat-icon-large">💎</div>
+                    <div class="stat-content">
+                        <div class="stat-value-large">$8.4M</div>
+                        <div class="stat-label">Total Funds Locked</div>
+                        <div class="stat-change positive">+23% this month</div>
+                    </div>
+                </div>
+
+                <div class="stat-card-large">
+                    <div class="stat-icon-large">✅</div>
+                    <div class="stat-content">
+                        <div class="stat-value-large">892</div>
+                        <div class="stat-label">Completed Milestones</div>
+                        <div class="stat-change positive">+8% this month</div>
+                    </div>
+                </div>
+
+                <div class="stat-card-large">
+                    <div class="stat-icon-large">👥</div>
+                    <div class="stat-content">
+                        <div class="stat-value-large">156</div>
+                        <div class="stat-label">Active Validators</div>
+                        <div class="stat-change positive">+5% this month</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analytics-row">
+                <div class="card analytics-card">
+                    <h2>Funding by Category</h2>
+                    <div class="category-chart">
+                        <div class="category-item">
+                            <div class="category-info">
+                                <span class="category-name">AgriTech</span>
+                                <span class="category-value">$2.1M</span>
+                            </div>
+                            <div class="category-bar">
+                                <div class="category-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-info">
+                                <span class="category-name">Renewable Energy</span>
+                                <span class="category-value">$1.8M</span>
+                            </div>
+                            <div class="category-bar">
+                                <div class="category-fill" style="width: 72%"></div>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-info">
+                                <span class="category-name">Healthcare</span>
+                                <span class="category-value">$1.5M</span>
+                            </div>
+                            <div class="category-bar">
+                                <div class="category-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-info">
+                                <span class="category-name">FinTech</span>
+                                <span class="category-value">$1.2M</span>
+                            </div>
+                            <div class="category-bar">
+                                <div class="category-fill" style="width: 48%"></div>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-info">
+                                <span class="category-name">EdTech</span>
+                                <span class="category-value">$0.9M</span>
+                            </div>
+                            <div class="category-bar">
+                                <div class="category-fill" style="width: 36%"></div>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-info">
+                                <span class="category-name">CleanTech</span>
+                                <span class="category-value">$0.9M</span>
+                            </div>
+                            <div class="category-bar">
+                                <div class="category-fill" style="width: 36%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card analytics-card">
+                    <h2>Project Status Distribution</h2>
+                    <div class="status-distribution">
+                        <div class="status-item">
+                            <div class="status-circle" style="--percentage: 45%">
+                                <span class="status-percentage">45%</span>
+                            </div>
+                            <div class="status-label">Active</div>
+                            <div class="status-count">111 projects</div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-circle" style="--percentage: 35%">
+                                <span class="status-percentage">35%</span>
+                            </div>
+                            <div class="status-label">Completed</div>
+                            <div class="status-count">86 projects</div>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-circle" style="--percentage: 20%">
+                                <span class="status-percentage">20%</span>
+                            </div>
+                            <div class="status-label">Funding</div>
+                            <div class="status-count">50 projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">✅</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Milestone Approved</div>
+                            <div class="activity-description">Smart Irrigation System - Milestone 2 approved by validators</div>
+                        </div>
+                        <div class="activity-time">2 min ago</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">💰</div>
+                        <div class="activity-content">
+                            <div class="activity-title">New Funding</div>
+                            <div class="activity-description">Solar Panel Manufacturing received $5,000 from investor</div>
+                        </div>
+                        <div class="activity-time">15 min ago</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">🚀</div>
+                        <div class="activity-content">
+                            <div class="activity-title">New Project</div>
+                            <div class="activity-description">AI-Powered Waste Management launched on platform</div>
+                        </div>
+                        <div class="activity-time">1 hour ago</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">📊</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Milestone Submitted</div>
+                            <div class="activity-description">Telemedicine Platform submitted Milestone 4 for review</div>
+                        </div>
+                        <div class="activity-time">3 hours ago</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">🎯</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Goal Reached</div>
+                            <div class="activity-description">Blockchain Payment Gateway reached 100% funding</div>
+                        </div>
+                        <div class="activity-time">5 hours ago</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
